@@ -4,12 +4,141 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/webp" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<img src="/blog picture.webp" class="profile-picture">
+		<h1 class="name">NURFITRA PUJO SANTIKO</h1>
+		<p class="short-intro">I have passion on product and software engineering. Occasionally write about technology, software engineering, books, and life lessons</p>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="/">HOME</a></li>
+				<li><a href="https://blog.nurfitrapujo.com" target="_blank">BLOG</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<p>contact me at <a href="mailto:fitrapujo@gmail.com">fitrapujo@gmail.com</a></p>
+			<div class="social-media">
+				<a href="https://github.com/NurfitraPujo"><img src="/github.svg" alt="Nurfitra Pujo S github" /></a>
+				<a href="https://www.linkedin.com/in/nurfitrapujo"><img src="/linkedin.svg" alt="Nurfitra Pujo S linkedin" /></a>
+				<a href="https://twitter.com/fitrapujo"><img src="/twitter.svg" alt="Nurfitra Pujo S twitter" /></a>
+			</div>
+		</footer>
 	</body>
 </html>
+
+<style is:global>
+	@import "/fonts/fonts.css";
+
+	:root {
+		--body-background: #292828;
+		--body-color: #f2f2f2;
+		--heading-color: black;
+		--action-color: #e3a54c;
+		--action-color-rgb: 227,165,76;
+		--secondary-text-color: #9a9a9a;
+	}
+
+	body {
+		background-color: var(--body-background);
+		color: var(--body-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		width: 100%;
+		font-family: 'Poppins', sans-serif;
+		font-size: 108%;
+	}
+
+	a {
+		color: var(--action-color)
+	}
+
+	.profile-picture {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 20px;
+	}
+
+	.name {
+		font-weight: 700;
+		font-size: 1.25rem;
+		letter-spacing: 2px;
+		margin: 0;
+		margin-bottom: 10px
+	}
+
+	.short-intro {
+		font-size: 1rem;
+		max-width: 600px;
+		text-align: center;
+		margin: 0;
+	}
+
+	.main-nav {
+		margin-top: 30px;
+	}
+
+	.main-nav ul {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 30px;
+		padding: 0;
+		margin: 0;
+	}
+
+	.main-nav li {
+		list-style: none;
+	}
+
+	.main-nav a {
+		font-size: 1rem;
+		text-decoration: none;
+		color: var(--body-color);
+	}
+
+	.main-nav a:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--action-color);
+	}
+
+	footer {
+		text-align: center;
+		margin-top: 2rem;
+		font-size: 0.875rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+	}
+
+	footer p {
+		margin: 0;
+	}
+
+	footer a {
+		text-decoration: none;
+	}
+
+	footer a:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--action-color);
+	}
+
+	.social-media {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 15px;
+	}
+
+	.social-media img {
+		fill: var(--body-color);
+	}
+</style>
