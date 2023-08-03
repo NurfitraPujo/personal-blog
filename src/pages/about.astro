@@ -11,15 +11,26 @@
 		<meta name="description" content="Nurfitra Pujo Santiko is software engineer that live in Indonesia. He is passionate about product engineering. He mainly use ruby, javascript and go as his daily arsenal for progamming.">
 	</head>
 	<body>
-		<h1 class="name tracking-wide text-[2rem] leading-[40px] max-w-[274px] md:text-[4rem] md:leading-[70px] md:max-w-[548px]">NURFITRA PUJO SANTIKO</h1>
-		<p class="short-intro">I have passion on product and software engineering. I use ruby, javascript and go to develop applications and websites. Occasionally write about technology, software engineering, books, and life lessons</p>
-		<nav class="main-nav">
-			<ul>
-				<li><a class="active-link" href="/">HOME</a></li>
-				<li><a href="/about">ABOUT</a></li>
-				<li><a href="https://blog.nurfitrapujo.com" target="_blank">BLOG</a></li>
-			</ul>
-		</nav>
+        <header>
+            <nav class="main-nav flex flex-row items-center">
+                <h3 class="text-[1.5rem] font-bold tracking-widest mr-10 leading-[36px]">NURFITRA PUJO</h3>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a class="active-link" href="/about">ABOUT</a></li>
+                    <li><a href="https://blog.nurfitrapujo.com" target="_blank">BLOG</a></li>
+                </ul>
+		    </nav>
+        </header>
+        <article class="max-w-[90%] md:max-w-[759px]">
+		    <h1 class="name tracking-wide text-[1rem] leading-[40px] max-w-[274px] md:text-[1.5rem] md:leading-[70px] md:max-w-[548px]">About me</h1>
+            <p>
+                Hello, my name is Nurfitra Pujo Santiko. You can call me Fitra / Pujo. I am software engineer that lives on Malang, Indonesia, and currently have no plans on moving elsewhere. I prefer remote work as much as possible, because I work more productive when I am by alone by myself (and commuting is such a hassle). My expertise is around web application development and I am comfortable working as fullstack engineer. While I am comfortable working with Javascript, Ruby and Golang, I am flexible and quick to catch up if there is need to learn another language.
+            </p>
+            <br/>
+            <p>
+                On my free time, I usually play games, read a book, tending my cats and fishes, tending my garden, etc. I also enjoy spending my weekend with close friends in cafe, play pool, or sports. I love nature and adventure, and rather spend my vacation on activities like hiking, camping, picnic, or just sight seeing.
+            </p>
+        </article>
 		<footer>
 			<p>contact me at <a href="mailto:fitrapujo@gmail.com">fitrapujo@gmail.com</a></p>
 			<div class="social-media">
@@ -49,7 +60,7 @@
 		color: var(--body-color);
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		min-height: 100vh;
 		width: 100%;
 		font-family: 'Poppins', sans-serif;
@@ -79,7 +90,7 @@
 	}
 
 	.main-nav {
-		margin-top: 30px;
+		margin-top: 0;
 	}
 
 	.main-nav ul {
@@ -96,10 +107,11 @@
 	}
 
 	.main-nav a {
-		font-size: 1rem;
+		font-size: 0.875rem;
 		font-weight: 800;
 		text-decoration: none;
 		color: var(--body-color);
+        line-height: 36px;
 	}
 
 	.main-nav .active-link {
