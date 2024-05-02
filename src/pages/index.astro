@@ -1,142 +1,47 @@
 ---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import MobileNav from "../components/MobileNav.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/webp" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Nurfitra Pujo Santiko</title>
-		<meta name="description" content="Nurfitra Pujo Santiko is software engineer that live in Indonesia. He is passionate about product engineering. He mainly use ruby, javascript and go as his daily arsenal for progamming.">
-		<link rel="stylesheet" href="/css/style.css">
-	</head>
-	<body class="font-body">
-		<h1 class="name tracking-wide text-[2rem] leading-[40px] max-w-[274px] md:text-[4rem] md:leading-[70px] md:max-w-[548px]">NURFITRA PUJO SANTIKO</h1>
-		<p class="short-intro">I have passion on product and software engineering. I use ruby, javascript and go to develop applications and websites. Occasionally write about technology, software engineering, books, and life lessons</p>
-		<nav class="main-nav">
-			<ul>
-				<li><a class="active-link" href="/">HOME</a></li>
-				<li><a href="/about">ABOUT</a></li>
-				<li><a href="https://blog.nurfitrapujo.com" target="_blank">BLOG</a></li>
-			</ul>
-		</nav>
-		<footer>
-			<p>contact me at <a href="mailto:fitrapujo@gmail.com">fitrapujo@gmail.com</a></p>
-			<div class="social-media">
-				<a href="https://github.com/NurfitraPujo"><img src="/github.svg" alt="Nurfitra Pujo S github" /></a>
-				<a href="https://www.linkedin.com/in/nurfitrapujo"><img src="/linkedin.svg" alt="Nurfitra Pujo S linkedin" /></a>
-				<a href="https://twitter.com/fitrapujo"><img src="/twitter.svg" alt="Nurfitra Pujo S twitter" /></a>
-			</div>
-		</footer>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/webp" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Nurfitra Pujo Santiko</title>
+    <meta
+      name="description"
+      content="Nurfitra Pujo Santiko is software engineer that live in Indonesia. He is passionate about product engineering. He mainly use ruby, javascript and go as his daily arsenal for progamming."
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+  </head>
+  <body
+    class="flex flex-col font-body text-[0.875rem] p-5 justify-center md:text-[1rem] md:px-30 md:py-20"
+  >
+    <h1
+      class="name tracking-wide font-bold text-[2rem] leading-[40px] max-w-[274px] md:text-[4rem] md:leading-[70px] md:max-w-[548px]"
+    >
+      NURFITRA PUJO SANTIKO
+    </h1>
+    <h3
+      class="text-[1.125rem] leading-[20px] md:text-[1rem] md:leading-[30px] mb-3"
+    >
+      Mid Software Engineer - Backend at <a
+        href="https://qontak.com/en/"
+        class="text-blue-500 font-bold hover:underline hover:decoration-color-blue-500"
+        >Qontak by Mekari</a
+      >
+    </h3>
+    <p class="max-w-[90%] md:max-w-[560px]">
+      I have passion on product and software engineering. I use ruby, javascript
+      and go to develop applications and websites. Occasionally write about
+      technology, software engineering, books, and life lessons
+    </p>
+    <Nav />
+    <MobileNav />
+    <Footer />
+  </body>
 </html>
-
-<style is:global>
-	@import "/fonts/fonts.css";
-
-	:root {
-		--body-background: #292828;
-		--body-color: #f2f2f2;
-		--heading-color: black;
-		--action-color: #e3a54c;
-		--action-color-rgb: 227,165,76;
-		--secondary-text-color: #9a9a9a;
-	}
-
-	body {
-		padding: 40px 68px;
-		background-color: var(--body-background);
-		color: var(--body-color);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 100vh;
-		width: 100%;
-		font-size: 108%;
-	}
-
-	a {
-		color: var(--action-color)
-	}
-
-	.profile-picture {
-		width: 70px;
-		height: 70px;
-		margin-bottom: 20px;
-	}
-
-	.name {
-		font-weight: 800;
-		margin: 0;
-		margin-bottom: 10px
-	}
-
-	.short-intro {
-		font-size: 1rem;
-		max-width: 600px;
-		margin: 0;
-	}
-
-	.main-nav {
-		margin-top: 30px;
-	}
-
-	.main-nav ul {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 30px;
-		padding: 0;
-		margin: 0;
-	}
-
-	.main-nav li {
-		list-style: none;
-	}
-
-	.main-nav a {
-		font-size: 1rem;
-		font-weight: 800;
-		text-decoration: none;
-		color: var(--body-color);
-	}
-
-	.main-nav .active-link {
-		color: var(--action-color);
-	}
-
-	footer {
-		margin-top: 4rem;
-		font-size: 0.875rem;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		gap: 5px;
-	}
-
-	footer p {
-		margin: 0;
-	}
-
-	footer a {
-		text-decoration: none;
-	}
-
-	footer a:hover {
-		text-decoration: underline;
-		text-decoration-color: var(--action-color);
-	}
-
-	.social-media {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 15px;
-	}
-
-	.social-media img {
-		fill: var(--body-color);
-	}
-</style>
