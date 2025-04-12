@@ -13,3 +13,88 @@
           "Segoe UI Symbol",
           "Noto Color Emoji";
 }
+
+@import './fonts/fonts.css';
+
+:root {
+  --body-background: #292828;
+  --body-color: #f2f2f2;
+  --heading-color: black;
+  --action-color: #e3a54c;
+  --action-color-rgb: 227, 165, 76;
+  --secondary-text-color: #9a9a9a;
+}
+
+body {
+  background-color: var(--body-background);
+  color: var(--body-color);
+  min-height: 100vh;
+  width: 100%;
+  font-size: 108%;
+}
+
+a {
+  color: var(--action-color);
+}
+
+.main-nav {
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  list-style: none;
+}
+
+.main-nav li a {
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--body-color);
+  line-height: 36px;
+}
+
+.main-nav .active-link {
+  color: var(--action-color);
+}
+
+/* footer {
+  margin-top: 4rem;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+} */
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--action-color);
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-media img {
+  fill: var(--body-color);
+}
