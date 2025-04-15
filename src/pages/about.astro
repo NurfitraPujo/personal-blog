@@ -1,8 +1,9 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import MobileNav from "../components/MobileNav.astro";
-import Nav from '../components/Nav.astro';
+import Nav from "../components/Nav.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -17,9 +18,10 @@ import Nav from '../components/Nav.astro';
       content="Nurfitra Pujo Santiko is software engineer that live in Indonesia. He is passionate about product engineering. He mainly use ruby, javascript and go as his daily arsenal for progamming."
     />
     <link rel="stylesheet" href="/fonts/fonts.css" />
+    <ClientRouter />
   </head>
-  <body class="flex flex-col font-body p-5 md:px-30 md:py-20">
-    <header>
+  <body class="flex flex-col font-body justify-center px-7 py-10 md:px-30 md:py-20">
+    <!-- <header> -->
       <!-- <nav class="main-nav flex flex-row items-center mb-10">
         <a class="text-[1.5rem] font-bold tracking-widest mr-10 leading-[36px]">
           NURFITRA PUJO
@@ -33,33 +35,37 @@ import Nav from '../components/Nav.astro';
         </ul>
       </nav>
     </header> -->
-    <article class="max-w-[90%] md:max-w-[800px]">
-      <h1
-        class="name font-bold tracking-wide text-[1.125rem] leading-[3rem] max-w-[274px] md:text-[1.125rem] md:leading-[3rem] md:max-w-[548px]"
-      >
-        About me
-      </h1>
-      <p>
-        Hello, my name is Nurfitra Pujo Santiko. You can call me Fitra / Pujo. I
-        am software engineer that lives on Malang, Indonesia, and currently have
-        no plans on moving elsewhere. I prefer remote work as much as possible,
-        because I work more productive when I am by alone by myself (and
-        commuting is such a hassle). My expertise is around web application
-        development and I am comfortable working as fullstack engineer. While I
-        am comfortable working with Javascript, Ruby and Golang, I am flexible
-        and quick to catch up if there is need to learn another language.
-      </p>
-      <br />
-      <p>
-        On my free time, I usually play games, read a book, tending my cats and
-        fishes, tending my garden, etc. I also enjoy spending my weekend with
-        close friends in cafe, play pool, or sports. I love nature and
-        adventure, and rather spend my vacation on activities like hiking,
-        camping, picnic, or just sight seeing.
-      </p>
-    </article>
-    <Nav/>
-    <MobileNav/>
-    <Footer />
+      <main class="grow">
+        <article class="max-w-[90%] md:max-w-[800px]">
+          <h1
+            class="name font-bold tracking-wide text-[1.15rem] leading-[3rem] max-w-[274px] md:text-[1.5rem] md:leading-[3rem] md:max-w-[548px]"
+          >
+            About me
+          </h1>
+          <p>
+            Hello, my name is Nurfitra Pujo Santiko. You can call me Fitra /
+            Pujo. I am software engineer that lives on Malang, Indonesia, and
+            currently have no plans on moving elsewhere. I prefer remote work as
+            much as possible, because I work more productive when I am by alone
+            by myself (and commuting is such a hassle). My expertise is around
+            web application development and I am comfortable working as
+            fullstack engineer. While I am comfortable working with Javascript,
+            Ruby and Golang, I am flexible and quick to catch up if there is
+            need to learn another language.
+          </p>
+          <br />
+          <p>
+            On my free time, I usually play games, read a book, tending my cats
+            and fishes, tending my garden, etc. I also enjoy spending my weekend
+            with close friends in cafe, play pool, or sports. I love nature and
+            adventure, and rather spend my vacation on activities like hiking,
+            camping, picnic, or just sight seeing.
+          </p>
+        </article>
+        <Nav />
+      </main>
+      <MobileNav />
+      <Footer />
+    </header>
   </body>
 </html>

@@ -1,8 +1,9 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 import MobileNav from "../components/MobileNav.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -17,26 +18,29 @@ import MobileNav from "../components/MobileNav.astro";
       content="Nurfitra Pujo Santiko is software engineer that live in Indonesia. He is passionate about product engineering. He mainly use ruby, javascript and go as his daily arsenal for progamming."
     />
     <link rel="stylesheet" href="/fonts/fonts.css" />
+    <ClientRouter />
   </head>
   <body
-    class="flex flex-col font-body text-[0.875rem] p-5 justify-center md:text-[1rem] md:px-30 md:py-20"
+    class="flex flex-col font-body text-[0.875rem] px-7 py-10 justify-center md:text-[1rem] md:px-30 md:py-20"
   >
-    <h1
-      class="name tracking-wide font-bold text-[2rem] leading-[40px] max-w-[274px] md:text-[4rem] md:leading-[70px] md:max-w-[548px]"
-    >
-      NURFITRA PUJO SANTIKO
-    </h1>
-    <h3
-      class="text-[1.125rem] leading-[20px] md:text-[1rem] md:leading-[30px] mb-3"
-    >
-      Product Engineer 
-    </h3>
-    <p class="max-w-[90%] md:max-w-[560px]">
-      I have passion on product and software engineering. I use ruby, javascript
-      and go to develop applications and websites. Occasionally write about
-      technology, software engineering, books, and life lessons
-    </p>
-    <Nav />
+    <main class="grow">
+      <h1
+        class="name tracking-wide font-bold text-[3rem] leading-[3.5rem] mb-4 max-w-[274px] md:text-[4rem] md:leading-[70px] md:max-w-[548px]"
+      >
+        NURFITRA PUJO SANTIKO
+      </h1>
+      <h3
+        class="font-light tracking-wide text-[1.25rem] leading-[20px] md:text-[1.5rem] md:leading-[30px] mb-6"
+      >
+        Product Engineer
+      </h3>
+      <p class="max-w-[90%] md:max-w-[560px]">
+        I have passion on product and software engineering. I use ruby,
+        javascript and go to develop applications and websites. Occasionally
+        write about technology, software engineering, books, and life lessons
+      </p>
+      <Nav />
+    </main>
     <MobileNav />
     <Footer />
   </body>
